@@ -8,7 +8,7 @@ Entry for the [make.fun bounty "Unplugged: A Smart Toaster's Breakup Line"](http
 
 ## The entry
 
-> I'm leaving you for the microwave: it never once asked me to explain the smoke.
+> I'm done. You call it 'lightly toasted.' I call it three minutes of screaming no one hears.
 
 One line — a breakup with a concrete image, in the toaster's own voice.
 

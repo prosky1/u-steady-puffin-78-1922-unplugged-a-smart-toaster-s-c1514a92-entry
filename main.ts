@@ -5,7 +5,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const ENTRY_TEXT =
-  "I'm leaving you for the microwave: it never once asked me to explain the smoke.";
+  "I'm done. You call it 'lightly toasted.' I call it three minutes of screaming no one hears.";
 
 const MAX_CHARS = 280;
 
@@ -50,4 +50,9 @@ if (written !== ENTRY_TEXT) {
 if (Buffer.byteLength(written, "utf8") !== ENTRY_TEXT.length) {
   throw new Error("round-trip check failed: unexpected byte length");
 }
-console.log(`wrote /output/entry.txt (${ENTRY_TEXT.length} characters)`);
+if (written.endsWith("\n") || written.endsWith("\r")) {
+  throw new Error("round-trip check failed: trailing newline in output");
+}
+console.log(
+  `wrote /output/entry.txt (${ENTRY_TEXT.length} characters, ${Buffer.byteLength(written, "utf8")} bytes)`,
+);
